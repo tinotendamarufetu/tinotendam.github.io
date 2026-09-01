@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinotenda Muchenje | Data Analyst & Analytics Engineer</title>
+  <meta name="description" content="Portfolio of Tinotenda Muchenje - Data Analyst & Analytics Engineer specializing in SQL, Python, Power BI, and Predictive Modeling." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brandDark: '#090D16',
+            brandCard: '#111827',
+            brandCardBorder: '#1F2937',
+            brandBlue: '#3B82F6',
+            brandEmerald: '#10B981',
+            brandMuted: '#94A3B8',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #090D16; color: #F8FAFC; }
+    .glass-nav {
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-slate-200 selection:bg-blue-600 selection:text-white">
+
+  <!-- ==================== 1. FIXED NAVIGATION BAR ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <span class="font-mono text-base font-bold tracking-tight text-white">TM<span class="text-blue-500">.analytics</span></span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-800/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Available for roles
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-white transition-colors">Tech Stack</a>
+        <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/tinotendamarufetu" target="_blank" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors" title="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-lg shadow-blue-600/20">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section class="pt-32 pb-16 px-6 max-w-6xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-blue-950/60 text-blue-400 border border-blue-800/50 mb-6">
+      <span>DATA ANALYST & ANALYTICS ENGINEER</span>
+      <span class="text-slate-600">|</span>
+      <span>MS IN DATA SCIENCE</span>
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight max-w-4xl">
+      Bridging Raw Data Pipelines with <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Executive Decision Systems.</span>
+    </h1>
+
+    <p class="mt-6 text-lg text-slate-400 max-w-2xl leading-relaxed">
+      Specializing in dynamic inventory optimization, predictive churn modeling, and automated business intelligence solutions using <span class="text-amber-400 font-medium">SQL</span>, <span class="text-blue-400 font-medium">Python</span>, and <span class="text-yellow-400 font-medium">Power BI</span>.
+    </p>
+
+    <div class="mt-8 flex flex-wrap items-center gap-4">
+      <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-lg shadow-blue-600/25">
+        Explore Case Studies <i data-lucide="arrow-down" class="w-4 h-4"></i>
+      </a>
+      <a href="https://linkedin.com/in/tinomaruz" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 transition-colors">
+        LinkedIn Profile <i data-lucide="external-link" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+    <!-- Metric Stats Ribbon -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+      <div class="p-3">
+        <div class="text-2xl font-bold font-mono text-white">46k+</div>
+        <div class="text-xs text-slate-400 mt-1">Poisson Orders Modeled</div>
+      </div>
+      <div class="p-3 border-l border-slate-800/80">
+        <div class="text-2xl font-bold font-mono text-emerald-400">$20.85M</div>
+        <div class="text-xs text-slate-400 mt-1">Replenishment Risk Isolated</div>
+      </div>
+      <div class="p-3 border-l border-slate-800/80">
+        <div class="text-2xl font-bold font-mono text-amber-400">0.781</div>
+        <div class="text-xs text-slate-400 mt-1">ROC-AUC Churn Engine</div>
+      </div>
+      <div class="p-3 border-l border-slate-800/80">
+        <div class="text-2xl font-bold font-mono text-blue-400">30%</div>
+        <div class="text-xs text-slate-400 mt-1">SLA Turnaround Reduced</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. FEATURED CASE STUDIES ==================== -->
+  <section id="projects" class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+    <div class="mb-10">
+      <span class="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider">Featured Case Studies</span>
+      <h2 class="text-3xl font-bold text-white mt-1">High-Impact Systems</h2>
+      <p class="text-slate-400 text-sm mt-1">End-to-end analytics engineering — from ingestion pipelines to boardroom decision suites.</p>
+    </div>
+
+    <div class="space-y-12">
+      <!-- FLAGSHIP PROJECT 1: SUPPLY CHAIN -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-slate-700 transition-all">
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          <div class="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950 aspect-video flex items-center justify-center">
+            <img src="assets/dashboard_overview.png" alt="Power BI Supply Chain Dashboard" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/0f172a/94a3b8?text=Power+BI+Dashboard+Preview'" />
+            <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur px-3 py-1 rounded-md border border-slate-700 text-xs font-mono">
+              Capital Risk: <span class="text-emerald-400 font-bold">$20.85M</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono font-semibold text-blue-400 uppercase">Supply Chain Analytics</span>
+            <h3 class="text-2xl font-bold text-white mt-1">Carltren Supply Logistics: Inventory Risk Engine</h3>
+            
+            <div class="mt-4 space-y-2 text-sm text-slate-300">
+              <p><strong class="text-slate-100">Problem:</strong> $19.00M tied in inventory without real-time stockout visibility across 500+ dynamic SKUs.</p>
+              <p><strong class="text-slate-100">Solution & Impact:</strong> Multi-tier PostgreSQL CTEs computing rolling ADD and vendor-adjusted ROP; isolated <span class="text-emerald-400 font-semibold">$20.85M replenishment risk</span> across 261 critical SKUs with automated Python PO generation.</p>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Power BI</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">DAX</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Python</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">SQLAlchemy</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-4">
+            <a href="https://github.com/tinotendamarufetu/enterprise-inventory-stockout-monitor" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i> GitHub Repo
+            </a>
+            <a href="https://medium.com/@tinotendamarufetu" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="book-open" class="w-4 h-4"></i> Medium Case Study ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLAGSHIP PROJECT 2: CHURN TELEMETRY -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-slate-700 transition-all">
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          <div class="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950 aspect-video flex items-center justify-center">
+            <img src="assets/streamlit_dashboard_preview.png" alt="Streamlit Churn Dashboard" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/0f172a/94a3b8?text=Streamlit+XAI+App+Preview'" />
+            <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur px-3 py-1 rounded-md border border-slate-700 text-xs font-mono">
+              MRR Prioritized: <span class="text-emerald-400 font-bold">$3.45M</span>
+            </div>
+            <div class="absolute top-3 right-3 bg-emerald-950/90 text-emerald-400 border border-emerald-700 px-2.5 py-0.5 rounded text-xs font-mono font-medium flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live App
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono font-semibold text-emerald-400 uppercase">ML Engineering & XAI</span>
+            <h3 class="text-2xl font-bold text-white mt-1">Enterprise Customer Churn & Network Telemetry</h3>
+            
+            <div class="mt-4 space-y-2 text-sm text-slate-300">
+              <p><strong class="text-slate-100">Problem:</strong> 180-day telemetry signal degradation driving silent enterprise account cancellations.</p>
+              <p><strong class="text-slate-100">Solution & Impact:</strong> Optuna-tuned XGBoost model (0.781 ROC-AUC) integrated with client-level SHAP explanations; deployed live Streamlit simulator prioritizing <span class="text-emerald-400 font-semibold">$3.45M in MRR at risk</span>.</p>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Python</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">XGBoost</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">SHAP</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">FastAPI</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Streamlit</span>
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Docker</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-4">
+            <a href="https://enterprise-churn-pipeline.streamlit.app" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors">
+              <i data-lucide="play" class="w-4 h-4"></i> Live Streamlit Demo ↗
+            </a>
+            <a href="https://github.com/tinotendamarufetu/enterprise-churn-telemetry-pipeline" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i> GitHub Repo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2: COMPACT 3-COLUMN PROJECT GRID -->
+    <div class="mt-12">
+      <h3 class="text-lg font-semibold text-white mb-6">Additional Applied Work & Data Systems</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Small Card 1 -->
+        <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <i data-lucide="shield-alert" class="w-5 h-5 text-blue-400"></i>
+              <span class="text-[11px] font-mono text-slate-400">Fintech / Banking</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-3">Core Banking Anomaly & Latency Monitor</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              T-SQL window CTEs and Z-Score statistics on transactional logs to detect transaction failure spikes and isolate SLA bottlenecks.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
+            <span class="font-mono text-slate-400">MS SQL • Tableau</span>
+            <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">Repo ↗</a>
+          </div>
+        </div>
+
+        <!-- Small Card 2 -->
+        <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <i data-lucide="activity" class="w-5 h-5 text-emerald-400"></i>
+              <span class="text-[11px] font-mono text-slate-400">Public Health</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-3">Healthcare Surveillance Pipeline</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Automated data validation pipelines across 5 regional districts with normalized SQL schemas, maintaining 99% audit integrity.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
+            <span class="font-mono text-slate-400">SSIS • Python • T-SQL</span>
+            <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">Repo ↗</a>
+          </div>
+        </div>
+
+        <!-- Small Card 3 -->
+        <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <i data-lucide="database" class="w-5 h-5 text-amber-400"></i>
+              <span class="text-[11px] font-mono text-slate-400">Data Engineering</span>
+            </div>
+            <h4 class="text-base font-bold text-white mt-3">Enterprise Cloud DW Schema Models</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Star & Snowflake dimensional models in Snowflake and PostgreSQL designed for sub-second executive BI query acceleration.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
+            <span class="font-mono text-slate-400">Snowflake • dbt • SQL</span>
+            <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">Repo ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. TECHNICAL COMPETENCY MATRIX ==================== -->
+  <section id="skills" class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+    <div class="mb-10">
+      <span class="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider">Technical Competency</span>
+      <h2 class="text-3xl font-bold text-white mt-1">Technology Matrix</h2>
+      <p class="text-slate-400 text-sm mt-1">Full-stack data infrastructure — from raw ingestion to insight delivery.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+        <div class="w-10 h-10 rounded-lg bg-blue-950/60 border border-blue-800/50 flex items-center justify-center text-blue-400 mb-4">
+          <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">BI & Analytics</h3>
+        <ul class="mt-3 space-y-2 text-xs font-mono text-slate-300">
+          <li>• Power BI (DAX, Modeling)</li>
+          <li>• Tableau Public / Server</li>
+          <li>• Microsoft Fabric</li>
+          <li>• Power Query (M)</li>
+          <li>• Advanced Excel & Alteryx</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+        <div class="w-10 h-10 rounded-lg bg-emerald-950/60 border border-emerald-800/50 flex items-center justify-center text-emerald-400 mb-4">
+          <i data-lucide="database" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">Databases & Cloud</h3>
+        <ul class="mt-3 space-y-2 text-xs font-mono text-slate-300">
+          <li>• PostgreSQL 16</li>
+          <li>• MS SQL Server (T-SQL)</li>
+          <li>• Snowflake Warehouse</li>
+          <li>• DuckDB</li>
+          <li>• Dimensional Star Schemas</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+        <div class="w-10 h-10 rounded-lg bg-amber-950/60 border border-amber-800/50 flex items-center justify-center text-amber-400 mb-4">
+          <i data-lucide="code" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">Programming & ETL</h3>
+        <ul class="mt-3 space-y-2 text-xs font-mono text-slate-300">
+          <li>• Python 3.11+ (Pandas, NumPy)</li>
+          <li>• SQL (Window CTEs)</li>
+          <li>• SQLAlchemy & Psycopg2</li>
+          <li>• FastAPI Endpoints</li>
+          <li>• SSIS Pipelines</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+        <div class="w-10 h-10 rounded-lg bg-purple-950/60 border border-purple-800/50 flex items-center justify-center text-purple-400 mb-4">
+          <i data-lucide="cpu" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">ML & MLOps</h3>
+        <ul class="mt-3 space-y-2 text-xs font-mono text-slate-300">
+          <li>• XGBoost & Scikit-Learn</li>
+          <li>• SHAP TreeExplainer (XAI)</li>
+          <li>• Optuna Bayesian Tuning</li>
+          <li>• Streamlit Cloud</li>
+          <li>• Docker & Git Versioning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. EXPERIENCE & CREDENTIALS ==================== -->
+  <section id="experience" class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+    <div class="mb-10">
+      <span class="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider">Background</span>
+      <h2 class="text-3xl font-bold text-white mt-1">Experience & Credentials</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Left Column: Education & Certs -->
+      <div class="lg:col-span-4 space-y-6">
+        <div>
+          <h3 class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2 mb-4">
+            <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-400"></i> Education
+          </h3>
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <div>
+              <div class="text-sm font-bold text-white">M.S. in Data Science</div>
+              <div class="text-xs text-blue-400">Montclair State University</div>
+              <div class="text-xs text-slate-500 mt-1">Jan 2024 – Dec 2025 • GPA: 3.9</div>
+            </div>
+            <div class="pt-3 border-t border-slate-800/80">
+              <div class="text-sm font-bold text-white">B.S. (Hons) in Information Technology</div>
+              <div class="text-xs text-blue-400">Chinhoyi University of Technology</div>
+              <div class="text-xs text-slate-500 mt-1">Graduated 2022 • GPA: 3.6</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2 mb-4">
+            <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Focus & Recognition
+          </h3>
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs space-y-2 text-slate-300 font-mono">
+            <div>• Enterprise Decision Systems</div>
+            <div>• Dynamic Inventory & Safety Stock</div>
+            <div>• Time Series & Anomaly Detection</div>
+            <div>• EB-2 NIW Research Alignment</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Work History Timeline -->
+      <div class="lg:col-span-8">
+        <h3 class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2 mb-4">
+          <i data-lucide="briefcase" class="w-4 h-4 text-amber-400"></i> Work History
+        </h3>
+        <div class="space-y-4">
+          
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h4 class="text-sm font-bold text-white">Data & Operations Analyst</h4>
+                <div class="text-xs text-blue-400">Carltren Construction • Newark, NJ</div>
+              </div>
+              <span class="text-xs font-mono text-slate-400">May 2024 – Dec 2025</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Architected automated Power BI dashboards using DAX and Power Query; built Python inventory reorder models cutting excess holding costs by 12% across 12+ sites.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h4 class="text-sm font-bold text-white">Business Data Analyst</h4>
+                <div class="text-xs text-blue-400">Dandemutande Internet Services • Harare</div>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Jun 2023 – Dec 2023</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Designed automated Tableau telemetry dashboards reducing enterprise churn by 10%; automated daily batch reporting via Python to cut SLA turnaround time by 30%.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h4 class="text-sm font-bold text-white">Data Officer</h4>
+                <div class="text-xs text-blue-400">Zimbabwe Health Interventions (ZHI) • Harare</div>
+              </div>
+              <span class="text-xs font-mono text-slate-400">May 2022 – May 2023</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Built automated data validation pipelines in SQL Server (T-SQL) and SSIS for 5,000+ records, maintaining 99% data integrity for external audits.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. ABOUT ME SECTION ==================== -->
+  <section id="about" class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+    <div class="mb-6">
+      <span class="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider">Philosophy</span>
+      <h2 class="text-3xl font-bold text-white mt-1">About Me</h2>
+    </div>
+    <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 text-slate-300 leading-relaxed space-y-4 max-w-4xl text-sm sm:text-base">
+      <p>
+        I am a Data Analyst & Analytics Engineer with a Master’s in Data Science from Montclair State University. My experience spans supply chain logistics, telecommunications, banking, and public health data systems.
+      </p>
+      <p>
+        I specialize in turning messy transactional data into clean, reproducible data pipelines and intuitive executive tools. Most of my work sits at the intersection of complex SQL (CTEs, window functions), Python automation engines, and interactive Business Intelligence in Power BI and Streamlit.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FOOTER & CONTACT ==================== -->
+  <footer id="contact" class="py-20 px-6 border-t border-slate-800 bg-slate-950/60">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider">Available for Full-Time & Contract Roles</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Let's build scalable data solutions together.</h2>
+      <p class="text-slate-400 text-sm mt-3">Open to analytics engineering, data science, and BI development opportunities globally.</p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:tinotendamarufetu@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-lg shadow-blue-600/30">
+          <i data-lucide="mail" class="w-4 h-4"></i> tinotendamarufetu@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/tinomaruz" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+        </a>
+        <a href="https://github.com/tinotendamarufetu" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+          <i data-lucide="github" class="w-4 h-4"></i> GitHub
+        </a>
+        <a href="https://medium.com/@tinotendamarufetu" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+          <i data-lucide="book-open" class="w-4 h-4"></i> Medium
+        </a>
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
+        <div>TM.analytics © 2026 Tinotenda Muchenje</div>
+        <div class="flex items-center gap-1.5 text-emerald-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live & Operational
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icon Initialization -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
