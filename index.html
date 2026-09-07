@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tinotenda Muchenje | Data Analyst & Analytics Engineer</title>
+  <title>Tinotenda M | Data Analyst & Analytics Engineer</title>
   <meta name="description" content="Portfolio of Tinotenda Muchenje - Data Analyst & Analytics Engineer specializing in SQL, Python, Power BI, and Predictive Modeling." />
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Inter & JetBrains Mono Fonts -->
+  <!-- Preload Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Production Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
     tailwind.config = {
@@ -36,12 +37,32 @@
       }
     }
   </script>
+
+  <!-- Critical Layout Fallback CSS (Prevents Scrambling & Disappearing Text) -->
   <style>
-    body { background-color: #090D16; color: #F8FAFC; }
+    /* Prevent FOUC (Flash of Unstyled Content) */
+    html {
+      background-color: #090D16;
+      color: #F8FAFC;
+    }
+    body {
+      background-color: #090D16;
+      color: #F8FAFC;
+      margin: 0;
+      padding: 0;
+    }
     .glass-nav {
       background: rgba(9, 13, 22, 0.85);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    /* Explicit gradient fallback so text NEVER vanishes */
+    .hero-gradient {
+      background: linear-gradient(90deg, #60A5FA, #818CF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline;
     }
   </style>
 </head>
@@ -51,7 +72,7 @@
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <span class="font-mono text-base font-bold tracking-tight text-white">TM<span class="text-blue-500">.analytics</span></span>
+        <span class="font-mono text-base font-bold tracking-tight text-white">TinoM<span class="text-blue-500">.analytics</span></span>
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-950/80 text-emerald-400 border border-emerald-800/50">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Available for roles
         </span>
@@ -76,16 +97,21 @@
     </div>
   </header>
 
+
   <!-- ==================== 2. HERO SECTION ==================== -->
   <section class="pt-32 pb-16 px-6 max-w-6xl mx-auto">
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-blue-950/60 text-blue-400 border border-blue-800/50 mb-6">
-      <span>DATA ANALYST & ANALYTICS ENGINEER</span>
+      <span>TINOTENDA M | DATA ANALYST & ANALYTICS ENGINEER</span>
       <span class="text-slate-600">|</span>
       <span>MS IN DATA SCIENCE</span>
     </div>
 
+
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight max-w-4xl">
-      Bridging Raw Data Pipelines with <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Executive Decision Systems.</span>
+        <span class="block">Bridging Raw Data Pipelines</span>
+        <span class="block mt-1">
+            <span class="text-slate-200">with </span><span class="hero-gradient">Executive Decision Systems.</span>
+        </span>
     </h1>
 
     <p class="mt-6 text-lg text-slate-400 max-w-2xl leading-relaxed">
@@ -218,67 +244,248 @@
       </div>
     </div>
 
-    <!-- TIER 2: COMPACT 3-COLUMN PROJECT GRID -->
-    <div class="mt-12">
-      <h3 class="text-lg font-semibold text-white mb-6">Additional Applied Work & Data Systems</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- TIER 2: 8-DASHBOARD ENTERPRISE GRID (4x2 RESPONSIVE) -->
+    <div class="mt-16 pt-12 border-t border-slate-800/80">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
+        <div>
+          <span class="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider">Applied Analytics</span>
+          <h3 class="text-2xl font-bold text-white mt-1">Additional Applied Work & Decision Systems</h3>
+        </div>
+        <span class="text-xs font-mono text-slate-400">8 Deployed Dashboards</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         
-        <!-- Small Card 1 -->
-        <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between">
+        <!-- CARD 1: DELAY ENGINE -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
           <div>
-            <div class="flex items-center justify-between">
-              <i data-lucide="shield-alert" class="w-5 h-5 text-blue-400"></i>
-              <span class="text-[11px] font-mono text-slate-400">Fintech / Banking</span>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/delay_engine.png" alt="Delay Engine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Delay+Engine'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-amber-400 border border-slate-700">
+                $88M Risk Impact
+              </div>
             </div>
-            <h4 class="text-base font-bold text-white mt-3">Core Banking Anomaly & Latency Monitor</h4>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              T-SQL window CTEs and Z-Score statistics on transactional logs to detect transaction failure spikes and isolate SLA bottlenecks.
-            </p>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Construction Ops</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Delay Engine & Resource Optimizer</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                What-If simulation model isolating crew shortages and lead-time delays impacting 1,760 project days.
+              </p>
+            </div>
           </div>
-          <div class="mt-4 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
-            <span class="font-mono text-slate-400">MS SQL • Tableau</span>
-            <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">Repo ↗</a>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • What-If</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/app/profile/tinotenda.muchenje/viz/construction_projects_delay_predictive_analysis/ConstructionProjectsDelayEngineandResourceOptimizerDashboard" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Small Card 2 -->
-        <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between">
+        <!-- CARD 2: COST VARIANCE -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
           <div>
-            <div class="flex items-center justify-between">
-              <i data-lucide="activity" class="w-5 h-5 text-emerald-400"></i>
-              <span class="text-[11px] font-mono text-slate-400">Public Health</span>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/cost_variance.png" alt="Cost Variance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Cost+Variance'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400 border border-slate-700">
+                100.8% Health
+              </div>
             </div>
-            <h4 class="text-base font-bold text-white mt-3">Healthcare Surveillance Pipeline</h4>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Automated data validation pipelines across 5 regional districts with normalized SQL schemas, maintaining 99% audit integrity.
-            </p>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Financial Logistics</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Construction Cost Variance Tracker</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Budget monitoring across 8 contractor trades; tracking $102k cost variance and 10,505 labor overrun hours.
+              </p>
+            </div>
           </div>
-          <div class="mt-4 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
-            <span class="font-mono text-slate-400">SSIS • Python • T-SQL</span>
-            <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">Repo ↗</a>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • Budget</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/construction_material_cost_variance_dashboard/ConstructionCostVarianceSubcontractorPerformanceDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu/Construction-Company-Material---Subcontractor-Cost-Variance-" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Small Card 3 -->
-        <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between">
+        <!-- CARD 3: IT SERVICE DELIVERY -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
           <div>
-            <div class="flex items-center justify-between">
-              <i data-lucide="database" class="w-5 h-5 text-amber-400"></i>
-              <span class="text-[11px] font-mono text-slate-400">Data Engineering</span>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/it_service_delivery.png" alt="IT Service Delivery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=IT+Delivery'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-red-400 border border-slate-700">
+                14.0% SLA Breach
+              </div>
             </div>
-            <h4 class="text-base font-bold text-white mt-3">Enterprise Cloud DW Schema Models</h4>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Star & Snowflake dimensional models in Snowflake and PostgreSQL designed for sub-second executive BI query acceleration.
-            </p>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Fintech / Banking</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Banking IT Service SLA Overview</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Incident monitoring across Mobile Banking, Core Banking (T24), and ATM switches tracking 2,205 tickets.
+              </p>
+            </div>
           </div>
-          <div class="mt-4 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
-            <span class="font-mono text-slate-400">Snowflake • dbt • SQL</span>
-            <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">Repo ↗</a>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • T24 SLA</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/IT-Service-Delivery-Dashboard_17707264337090/ExecutiveDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu/IT_Service_Delivery_-_SLA_Performance_Analytics" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: HEALTHCARE TRENOX -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/healthcare_trenox.png" alt="Healthcare Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Healthcare'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400 border border-slate-700">
+                $149k Revenue
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Clinical Informatics</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Trenox Healthcare Clinical Dashboard</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Real-time appointment scheduling, payer mix breakdown (53% BCBS), and duration operational trends.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • Healthcare</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/HealthcareDashboard_17694554334830/HealthcareDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu/Healthcare-Analytics" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: BENEFICIARY RETENTION -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/beneficiary_retention.png" alt="Beneficiary Retention" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Public+Health'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400 border border-slate-700">
+                94% Retention
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Public Health / NGO</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Public Health Beneficiary Retention</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Spatial analytics mapping program engagement across regional districts with $626K allocated funding.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • GeoSpatial</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/program-impact-analysis-dashboard/ImpactOverviewDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu/AI-Driven-Beneficiary-Retention-Intervention-System" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: DATA GOVERNANCE FORUM -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/data_governance.png" alt="Data Governance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Data+Governance'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-amber-400 border border-slate-700">
+                1,492 Issues Tracked
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Data Architecture</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Enterprise Data Governance Forum</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Workstream tracking across Severity 1–5 compliance issues, audit sources, and remediation pipelines.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • Governance</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/data-governance-analytics/DataGorvenanceDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu/Enterprise-Data-Governance-Dashboard" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: CUSTOMER RETENTION -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/customer_retention.png" alt="Customer Analytics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Customer+Analytics'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400 border border-slate-700">
+                +10.8% Sales/Cust
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">E-Commerce BI</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Customer Analytics & Retention Suite</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Year-over-year sparkline performance tracking, order frequency histograms, and top-tier client profit rankings.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • Sales BI</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/SalesCustomerDashboards_17684971507800/CustomerDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8: SMART WALLET -->
+        <div class="rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-slate-800">
+              <img src="assets/smart_wallet.png" alt="Financial Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x250/0f172a/94a3b8?text=Smart+Wallet'" />
+              <div class="absolute top-2 left-2 bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400 border border-slate-700">
+                36.8% Savings
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="text-[11px] font-mono text-slate-400">Personal Wealth</div>
+              <h4 class="text-sm font-bold text-white mt-1 leading-snug">Smart Wallet Cash Flow Dashboard</h4>
+              <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                Budget pacing by expense category, cash reserve projections, and monthly net wealth trajectory tracking.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-slate-400">Tableau • Cash Flow</span>
+              <div class="flex items-center gap-3">
+                <a href="https://public.tableau.com/views/smart_wallet_dashboard/SmartWalletDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold text-[11px]">Tableau ↗</a>
+                <a href="https://github.com/tinotendamarufetu" target="_blank" class="text-slate-400 hover:text-white font-semibold text-[11px]">Repo ↗</a>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
+
+
+
   </section>
 
   <!-- ==================== 4. TECHNICAL COMPETENCY MATRIX ==================== -->
@@ -366,27 +573,44 @@
             <div>
               <div class="text-sm font-bold text-white">M.S. in Data Science</div>
               <div class="text-xs text-blue-400">Montclair State University</div>
-              <div class="text-xs text-slate-500 mt-1">Jan 2024 – Dec 2025 • GPA: 3.9</div>
+              <div class="text-xs text-slate-500 mt-1">Jan 2024 – Dec 2025</div>
             </div>
             <div class="pt-3 border-t border-slate-800/80">
               <div class="text-sm font-bold text-white">B.S. (Hons) in Information Technology</div>
               <div class="text-xs text-blue-400">Chinhoyi University of Technology</div>
-              <div class="text-xs text-slate-500 mt-1">Graduated 2022 • GPA: 3.6</div>
+              <div class="text-xs text-slate-500 mt-1">Graduated 2022</div>
             </div>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2 mb-4">
-            <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Focus & Recognition
+            <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Core Focus & Impact
           </h3>
-          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs space-y-2 text-slate-300 font-mono">
-            <div>• Enterprise Decision Systems</div>
-            <div>• Dynamic Inventory & Safety Stock</div>
-            <div>• Time Series & Anomaly Detection</div>
-            <div>• EB-2 NIW Research Alignment</div>
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs space-y-2.5 text-slate-300 font-mono">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              <span>Enterprise Decision Systems</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Dynamic Inventory & Safety Stock</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              <span>Time Series & Anomaly Detection</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+              <span>Automated ETL & PO Manifest Engines</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>High-Frequency Telemetry Pipelines</span>
+            </div>
           </div>
         </div>
+
       </div>
 
       <!-- Right Column: Work History Timeline -->
@@ -396,24 +620,26 @@
         </h3>
         <div class="space-y-4">
           
+          <!-- Role 1: Carltren Construction -->
           <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <h4 class="text-sm font-bold text-white">Data & Operations Analyst</h4>
                 <div class="text-xs text-blue-400">Carltren Construction • Newark, NJ</div>
               </div>
-              <span class="text-xs font-mono text-slate-400">May 2024 – Dec 2025</span>
+              <span class="text-xs font-mono text-slate-400">January 2025 – Dec 2025</span>
             </div>
             <p class="text-xs text-slate-300 mt-3 leading-relaxed">
               Architected automated Power BI dashboards using DAX and Power Query; built Python inventory reorder models cutting excess holding costs by 12% across 12+ sites.
             </p>
           </div>
 
+          <!-- Role 2: Dandemutande -->
           <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <h4 class="text-sm font-bold text-white">Business Data Analyst</h4>
-                <div class="text-xs text-blue-400">Dandemutande Internet Services • Harare</div>
+                <div class="text-xs text-blue-400">Dandemutande Internet Services • Harare, Zimbabwe</div>
               </div>
               <span class="text-xs font-mono text-slate-400">Jun 2023 – Dec 2023</span>
             </div>
@@ -422,20 +648,40 @@
             </p>
           </div>
 
+          <!-- Role 3: ZHI -->
           <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <h4 class="text-sm font-bold text-white">Data Officer</h4>
-                <div class="text-xs text-blue-400">Zimbabwe Health Interventions (ZHI) • Harare</div>
+                <div class="text-xs text-blue-400">Zimbabwe Health Interventions (ZHI) • Harare, Zimbabwe</div>
               </div>
               <span class="text-xs font-mono text-slate-400">May 2022 – May 2023</span>
             </div>
             <p class="text-xs text-slate-300 mt-3 leading-relaxed">
-              Built automated data validation pipelines in SQL Server (T-SQL) and SSIS for 5,000+ records, maintaining 99% data integrity for external audits.
+              Built automated data validation pipelines in SQL Server (T-SQL) and SSIS for 5,000+ records, maintaining 99% data integrity for external donor audits.
+            </p>
+          </div>
+
+          <!-- Role 4: NMB Bank -->
+          <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h4 class="text-sm font-bold text-white">Junior Data Analyst</h4>
+                <div class="text-xs text-blue-400">NMB Bank Limited • Harare, Zimbabwe</div>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Jan 2021 – Apr 2022</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+              Maintained real-time Tableau dashboards tracking core banking transaction failures; ran SQL root-cause analysis on error logs to cut escalation resolution time by 25%.
             </p>
           </div>
 
         </div>
+      </div>
+
+
+
+
       </div>
     </div>
   </section>
@@ -479,7 +725,7 @@
       </div>
 
       <div class="mt-16 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
-        <div>TM.analytics © 2026 Tinotenda Muchenje</div>
+        <div>TM.analytics © 2026 Tinotenda M</div>
         <div class="flex items-center gap-1.5 text-emerald-400">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live & Operational
         </div>
